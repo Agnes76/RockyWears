@@ -33,6 +33,8 @@ namespace Database
                     await context.Products.AddRangeAsync(productList);
                 }
                 
+
+
                 await context.SaveChangesAsync();
             }
             catch (Exception ex)
