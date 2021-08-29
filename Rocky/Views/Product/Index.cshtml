@@ -1,0 +1,42 @@
+﻿@using System.Globalization;
+@{ ViewData["Title"] = "Product Page"; }
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Product Page</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <form method="post" asp-action="SearchByCategory" class="form-inline my-2 my-lg-0">
+        <input name="searchQuery" class="form-control mr-sm-2" type="text" placeholder="Search Product by Category" aria-label="Search">
+        <button type="submit" asp-controller="Product" asp-action="SearchByCategory" class="btn btn-primary"> Search </button>
+    </form>
+</div>
+
+<div class="album py-5 bg-light">
+    <div class="row mx-auto p-3">
+        @foreach (var item in @Model)
+        {
+<div class="col-md-3 mb-3" style="height: 400px;">
+    <div class="card shadow-sm">
+        <img class="bd-placeholder-img card-img-top img-fluid" src=@item.Image[0].ImageUrl style="width: auto; height: 225px; object-fit: cover;" />
+        <div class="card-body">
+            <p class="card-title">@item.Name</p>
+            <div class="d-flex justify-content-between  align-items-center">
+                @{ var priceAsString = "$ " + item.Price.ToString("N1", CultureInfo.InvariantCulture);
+    <p class="text-muted my-auto">@priceAsString</p> }
+                <div class="btn-group">
+                    <a type="button" asp-controller="Product" asp-action="Details" asp-route-Id=@item.Id
+                       class="btn btn-sm btn-outline-primary">
+                        More Details
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        }
+    </div>
+</div>
+
+
+
+
+
