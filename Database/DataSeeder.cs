@@ -28,7 +28,7 @@ namespace Database
                 bool b = context.Products.Any();
                 if (!context.Products.Any())
                 {
-                    var productData = File.ReadAllText(Path.Combine(dirDb, "json", "product.json"));
+                    var productData = File.ReadAllText(Path.Combine(dirDb + @"/json/product.json"));
                     var productList = JsonConvert.DeserializeObject<List<Product>>(productData);
                     await context.Products.AddRangeAsync(productList);
                 }

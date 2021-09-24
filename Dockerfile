@@ -3,14 +3,14 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS base
 WORKDIR /src
 COPY *.sln .
-COPY Rocky/*.csproj Rocky/
-COPY Repository/*.csproj Repository/
-COPY Database/*.csproj Database/
-COPY Model/*.csproj Model/
+COPY Rocky/*csproj Rocky/
+COPY Repository/*csproj Repository/
+COPY Database/*csproj Database/
+COPY Model/*csproj Model/
+
+
 RUN dotnet restore Rocky/*.csproj
-RUN dotnet restore Repository/*.csproj
-RUN dotnet restore Database/*.csproj
-RUN dotnet restore Model/*.csproj
+
 COPY . .
 # #Testing
 # FROM base AS testing

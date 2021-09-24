@@ -28,3 +28,6 @@ C:\Users\hp\source\repos\Rocky\Database\obj\Debug\net5.0\Database.csproj.CopyCom
 C:\Users\hp\source\repos\Rocky\Database\obj\Debug\net5.0\Database.dll
 C:\Users\hp\source\repos\Rocky\Database\obj\Debug\net5.0\ref\Database.dll
 C:\Users\hp\source\repos\Rocky\Database\obj\Debug\net5.0\Database.pdb
+C:\Users\hp\source\repos\Rocky\Database\bin\Debug\net5.0\Database.runtimeconfig.json
+C:\Users\hp\source\repos\Rocky\Database\bin\Debug\net5.0\Database.runtimeconfig.dev.json
+C:\Users\hp\source\repos\Rocky\Database\obj\Debug\net5.0\Database.genruntimeconfig.cache
